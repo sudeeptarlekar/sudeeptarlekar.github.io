@@ -5,7 +5,6 @@ categories: [Ruby]
 tags: [Ruby, Rails, Metaprogramming]
 ---
 
-# What is the difference between Ruby's define_method and define_singleton_method?
 ![Image by StockSnap from Pixabay](/assets/article_images/2023-03-04-define-method-and-define-singleton-method/blog_image.jpg)
 
 Ruby is a popular object-oriented programming language known for its expressiveness and flexibility.
@@ -20,10 +19,10 @@ value, but there is a slight difference between them.
 Let's see how these two methods work differently
 
 ## define_method
-With ***define_method*** you can add the method dynamically in a class instance.
+Using ***define_method***, you can dynamically add a method to a class instance.
 The ***define_method*** method takes two arguments: the name of the new method to be defined as a symbol or a string,
 and a block that contains the code to be executed when the new method is called.
-Let's see an example to understand this
+To better understand this, let's take a look at an example."
 
 ```ruby
 class Dummy
@@ -37,8 +36,8 @@ dummy.my_method
 # => Executing 'my_method'
 ```
 
-The key point here I would like to make is that ***define_method*** is only available at the class
-level and if you try to create a method from the instance you will end up getting an error.
+The key point I would like to make is that ***define_method*** is only available at the class level,
+and attempting to create a method from an instance will result in an error.
 
 However, it is important to use ***define_method*** with caution, as it can also lead to
 unexpected behavior if not used properly. Let's understand this with following example.
@@ -64,9 +63,9 @@ blue_car.start_building
 # => Starting a new car build with a color Blue
 ```
 
-If you observe closely, our `build` is a class method, why is that so? This is because ***define_method*** is only available
-as a class method and not as an instance method, if you convert the `build` as an instance method, you will end up
-getting a **NoMethodError**.
+If you observe closely, you'll notice that our `build` method is a class method.
+This is because ***define_method*** is only available as a class method, not as an instance method.
+Attempting to convert build into an instance method will result in a **NoMethodError**.
 
 So far, everything is looking good, but when you call `start_building` on `red_car` again you will see some issues with output.
 
@@ -84,8 +83,8 @@ end
 ```
 
 ## define_singleton_method
-With ***define_singleton_method*** as well we can create methods at the runtime, but this function works a bit differently,
-more on this later but first, let us see how we can create a method using ***define_singleton_method***.
+We can also create methods at runtime using ***define_singleton_method***,
+but this function works a bit differently. Let's see how we can create a method using ***define_singleton_method***.
 
 ```ruby
 class Car
@@ -110,11 +109,11 @@ blue_car.build('Blue')
 blue_car.start_building
 # => Starting a new car build with a color Blue
 ```
-Two things I would like to point out here are
-- We have to explicitly call ***build*** on each object, without this we will get an error when calling the dynamic method.
-- ***define_singleton_method*** is available as an instance, as well as a class method, however,
-  the level of the parent class, defines the
-  level of the dynamic method, compare the following dummy code snippets to understand this
+I'd like to point out two things here:
+- We need to explicitly call `build` on each object; otherwise, we will get an error when calling the dynamic method.
+- ***define_singleton_method*** is available as both an instance method and a class method.
+  However, the level of the parent class determines the level of the dynamic method.
+  To better understand this, let's compare the following dummy code snippets
 
 ```ruby
 class DummyKlass
