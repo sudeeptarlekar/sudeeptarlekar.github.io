@@ -5,6 +5,8 @@ categories: [Ruby]
 tags: [Ruby, Rails, Metaprogramming]
 ---
 
+![Image by StockSnap from Pixabay](/assets/article_images/2023_03_15_adding_rails_like_associations_in_ruby.jpg)
+
 Rails associations are a way to define relationships between entities in a Ruby on Rails application.
 They allow you to specify how different models are connected and how data can be accessed across
 those relationships, making it easier to build complex applications with interconnected data.
