@@ -5,7 +5,7 @@ categories: [Ruby]
 tags: [Ruby, Rails, Metaprogramming]
 ---
 
-![Image by StockSnap from Pixabay](/assets/article_images/2023-03-04-define-method-and-define-singleton-method/blog_image.jpg)
+![Image by StockSnap from Pixabay](/assets/article_images/2023_03_04_define_method_and_define_singleton_method.jpg)
 
 Ruby is a popular object-oriented programming language known for its expressiveness and flexibility.
 One of the unique features of Ruby is its support for metaprogramming,
