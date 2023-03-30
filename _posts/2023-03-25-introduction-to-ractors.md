@@ -36,7 +36,6 @@ ractor = Ractor.new { puts 'Hello world!' }
 # => #<Ractor:#2 (irb):1 terminated>
 
 # Creating ractors with the name
-
 test_ractor = Ractor.new(name: 'Test') { puts 'Hello World!' }
 
 # <internal:ractor>:267: warning: Ractor is experimental, and the behavior may change
