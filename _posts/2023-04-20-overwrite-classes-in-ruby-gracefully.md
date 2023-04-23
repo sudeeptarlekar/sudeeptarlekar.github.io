@@ -106,6 +106,29 @@ available in **main.rb**
 > When a module includes multiple refinements, and they are activated using the `using` keyword,
   all the refinements from the module become active.
 
+When you add refinements it is added to the ancestors
+To demonstrate this take a look at the following code sample.
+
+```ruby
+module Foo
+  def self.call
+    refine String do
+      def count
+        length
+      end
+    end
+  end
+end
+
+sample_test = Foo.call
+
+sample_test.class
+# => Module
+
+sample_test.ancestors
+# => [#<refinement:String@Foo>, String, Comparable, Object, Kernel, BasicObject]
+```
+
 ## Method Lookups
 
 When you call the refinement, Ruby searches for method from class in reverse order, as follows:
@@ -149,6 +172,45 @@ Foo.new.post
 # => Original: Hello from Foo#post
 ```
 
+## Changes in Ruby3.0
+
+1. 3.1.0
+
+    Ruby 3.1.0 add many more features in refinements, as you can combine multiple methods from other
+    modules using `import_methods`.
+
+    ```ruby
+    module Utilities
+      def greet
+        "Hello #{self}!"
+      end
+    end
+
+    module Bar
+      refine String do
+        import_methods Utilities
+      end
+    end
+
+    using Bar
+    'John'.greet
+    ```
+
+2. 3.2.0
+
+   Ruby 3.2.0 adds a great way to check if any refinements are being used by calling `used_refinements` on `Module`.
+
+   ```ruby
+   module Utilities
+     refine(String) { def count = length }
+   end
+
+   Module.used_refinements # => []
+   using Utilities
+   Module.used_refinements # => [#<refinement:String@Utilities>]
+   ```
+
+
 ## Summary
 1. Refinements are a great way to add monkey patching to Ruby code without causing any side effects.
 2. The argument to the `refine` should be class, and refinements are activated by calling `using`.
@@ -156,3 +218,8 @@ Foo.new.post
    They are deactivated outside the current scope.
 4. A file with an active refinement will not activate the refinement when imported.
 5. Methods are searched in a reversed order when called.
+
+## Further Reading
+
+1. [Refinements in Ruby](https://docs.ruby-lang.org/en/2.4.0/syntax/refinements_rdoc.html)
+2. [Ruby-Doc](https://ruby-doc.org/core-3.1.0/Refinement.html)
