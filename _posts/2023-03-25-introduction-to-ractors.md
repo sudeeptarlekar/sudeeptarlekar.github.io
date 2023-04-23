@@ -279,3 +279,6 @@ puts "#{data.frozen?}; #{data[0].frozen?}; #{data[1].frozen?}"
       ractor.my_method
       # Custom method called on Ractor
    ```
+
+## Further Reading
+1. [Ruby Documentation](https://ruby-doc.org/core-3.0.0/Ractor.html)
