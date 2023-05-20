@@ -1,11 +1,11 @@
 ---
-title: Overwrite classes in Ruby gracefully
+title: Understanding Refinements in Ruby
 date: 2023-04-20 15:30:00
 categories: [Ruby]
 tags: [Rails, Ruby]
 ---
 
-![Image](/assets/article_images/2023_04_20_overwrite_gracefully.jpg)
+![Image](/assets/article_images/2023_04_20_refinements_ruby.jpg)
 
 ## Introduction
 In the Ruby world, everything is an object and is represented by classes.
