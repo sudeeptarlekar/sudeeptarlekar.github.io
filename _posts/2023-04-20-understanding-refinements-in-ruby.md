@@ -3,11 +3,13 @@ title: Understanding Refinements in Ruby
 date: 2023-04-20 15:30:00
 categories: [Ruby]
 tags: [Rails, Ruby]
+image:
+  path: /assets/article_images/2023_04_20_refinements_ruby.jpg
+  alt: Responsive image.
 ---
 
-![Image](/assets/article_images/2023_04_20_refinements_ruby.jpg)
-
 ## Introduction
+
 In the Ruby world, everything is an object and is represented by classes.
 This makes it easy to tweak the functionality of certain classes based on your needs.
 In real life, this is called monkey patching. However, when you add a monkey patch to a class,
@@ -35,6 +37,7 @@ using MyWorld
 ```
 
 ## Scoping in Refinements
+
 Refinements are lexical in scope, meaning they will only be activated within the scope
 in which they are called using the `using` keyword. Once control is transferred to an outside scope,
 the refinements are deactivated. Therefore, if you call or require a refined method from outside

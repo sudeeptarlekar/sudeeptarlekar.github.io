@@ -3,14 +3,17 @@ title: How to add Rails like associations in simple Ruby
 date: 2023-03-15 18:25:00
 categories: [Ruby]
 tags: [Ruby, Rails, Metaprogramming]
+image:
+  path: /assets/article_images/2023_03_15_adding_rails_like_associations_in_Ruby.jpg
+  alt: Responsive image.
 ---
-
-![Image](/assets/article_images/2023_03_15_adding_rails_like_associations_in_Ruby.jpg)
 
 Rails associations are a way to define relationships between entities in a Ruby on Rails application.
 They allow you to specify how different models are connected and how data can be accessed across
 those relationships, making it easier to build complex applications with interconnected data.
 Some examples of Rails associations include has_many, belongs_to, and has_and_belongs_to_many.
+
+## Introduction
 
 Association in Rails are powered by ActiveRecord gem for working with databases in the Ruby on Rails
 applications. It also allows you to interact with a database through Ruby code,
