@@ -3,9 +3,10 @@ title: Introduction to Ractors in Ruby
 date: 2023-03-25 14:05:00
 categories: [Ruby]
 tags: [Ruby, Rails]
+image:
+  path: /assets/article_images/2023-03-25-introduction-to-ractors.jpg
+  alt: Responsive image.
 ---
-
-![Image](/assets/article_images/2023-03-25-introduction-to-ractors.jpg)
 
 Ruby is commonly considered slow in terms of performance compared to other programming languages,
 and the Ruby community is actively working to improve its speed.

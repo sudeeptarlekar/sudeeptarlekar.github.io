@@ -3,9 +3,12 @@ title: What is the difference between define_method and define_singleton_method?
 date: 2023-03-04 14:00:00
 categories: [Ruby]
 tags: [Ruby, Rails, Metaprogramming]
+image:
+  path: /assets/article_images/2023_03_04_define_method_and_define_singleton_method.jpg
+  alt: Responsive Rendering of image.
 ---
 
-![Image](/assets/article_images/2023_03_04_define_method_and_define_singleton_method.jpg)
+## Introduction
 
 Ruby is a popular object-oriented programming language known for its expressiveness and flexibility.
 One of the unique features of Ruby is its support for metaprogramming,
@@ -152,6 +155,7 @@ class method.
 adds **my_method** as an instance method and not as a class method.
 
 ## Summary
+
 - We can create methods in Ruby at runtime using ***define_method*** and ***define_singleton_method***
 - ***define_method*** has to be executed by class and it creates the instance method.
 - ***define_singleton_method*** can be called from class or from class instance. If it is called from class then
