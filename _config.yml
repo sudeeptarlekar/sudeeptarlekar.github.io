@@ -74,7 +74,7 @@ theme_mode:
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "/assets/img/TFKTK7A0J-U03DDP9HVF1-44b596ddc32f-512.jpeg"
+avatar: "/assets/img/profile.png"
 
 # boolean type, the global switch for ToC in posts.
 toc: true
