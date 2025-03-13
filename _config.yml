@@ -1,7 +1,7 @@
 title: Sudeep Tarlekar
-tagline: Ruby on Rails and ReactJS artist.
+tagline: Love Ru(by)st 🦀.
 description: >-
-  Loves Ruby. Ruby on Rails and ReactJS artist.
+  Loves Ruby. Ruby on Rails and ReactJS artist. Exploring and learning low level developement with Rust.
 url: "https://sudeeptarlekar.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 # baseurl: "localhost:4000"
 
@@ -19,7 +19,7 @@ lang: en
 prefer_datetime_locale:
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: Europe/Berlin
 
 github:
   username: sudeeptarlekar
