@@ -1,6 +1,6 @@
 ---
 title: initialize_clone and initialize_dup in Ruby
-date: 2025-02-01 10:00:00
+date: 2025-03-29 10:00:00
 categories: [Ruby]
 tags: [Rails, Ruby]
 ---
